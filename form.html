@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Contact form">
+    <meta name="keywords" content="contact form">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact form</title>
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Datepicker JS -->
+    <script src="js/bootstrap-datepicker.min.js"></script>
+    <!-- Jquery Validate -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Datepicker CSS -->
+    <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
+    <!-- Additional Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+
+<main>
+    <form id="rezervacija" method="get" action="">
+
+    <div class="container">
+        <h1>Rezervacija</h1>
+        <div class="form-row">
+                <div class="form-group col-md-8">
+                    <label for="name">Ime</label>
+                    <input type="text" class="form-control" name="name" id="name" aria-describedby="name" placeholder="Unesite ime" required>
+                </div>
+            <div class="form-group col-md-4">
+                <button type="button" class="btn btn-primary btn-add align-bottom">Dodaj osobu</button>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="date">Datum</label>
+                <input type="text" class="form-control datepicker" name="date" id="date" aria-describedby="date" placeholder="Odaberite datum"  required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="time">Vrijeme</label>
+                <input type="time" class="form-control" name="time" id="time" aria-describedby="time" placeholder="Odaberite vrijeme" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="osobe">Broj osoba</label>
+                <input type="number" class="form-control" name="osobe" id="osobe" aria-describedby="osobe" placeholder="Unesite broj osoba" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="trajanje">Trajanje</label>
+                <input type="time" class="form-control" name="trajanje" id="trajanje" aria-describedby="trajanje" placeholder="Odaberite trajanje" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label for="stol">Stol</label>
+                <input type="text" class="form-control input-stol" name="stol" id="stol" aria-describedby="stol" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-8">
+                <label for="zaduzena-osoba">Zadužena osoba</label>
+                <select name="zaduzena-osoba" id="zaduzena-osoba" class="form-control" required>
+                    <option value="" disabled selected>Odaberite...</option>
+                    <option value="ime-opcije">...</option>
+                </select>
+            </div>
+            <div class="form-group col-md-4">
+                <select name="zaduzena-osoba-dodatno" id="zaduzena-osoba-dodatno" class="form-control" required>
+                    <option value="" disabled selected>Odaberite...</option>
+                    <option value="ime-opcije">...</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label for="telefon">Telefon</label>
+                <input type="text" class="form-control" name="telefon" id="telefon" aria-describedby="telefon" placeholder="Unesite broj telefona" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label for="email">E-mail</label>
+                <input type="email" class="form-control" name="email" id="email" aria-describedby="email" placeholder="Unesite email adresu" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label for="kategorija">Kategorija</label>
+                <select name="kategorije" id="kategorija" class="form-control" required>
+                    <option value="" disabled selected>Odaberite...</option>
+                    <option value="ime-opcije">...</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label for="preporuka">Preporuka</label>
+                <select name="preporuka" id="preporuka" class="form-control" required>
+                    <option value="" disabled selected>Odaberite...</option>
+                    <option value="ime-opcije">...</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label for="partner">Partner</label>
+                <select name="partner" id="partner" class="form-control" required>
+                    <option value="" disabled selected>Odaberite...</option>
+                    <option value="ime-opcije">...</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="total">Total (€)</label>
+                <input type="number" class="form-control" name="total" id="total" aria-describedby="total" placeholder="Unesite ukupnu cijenu" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="provizija">Provizija (€)</label>
+                <input type="number" class="form-control" name="provizija" id="provizija" aria-describedby="provizija" placeholder="Unesite proviziju" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label for="napomena">Napomena</label>
+                <textarea class="form-control" name="napomena" id="napomena" rows="3" aria-describedby="napomena" placeholder="Unesite napomenu"></textarea>
+            </div>
+        </div>
+
+        <div class="form-row buttons-row">
+            <div class="form-group col-md-8">
+                <button type="submit" class="btn btn-success btn-block">Dodaj</button>
+            </div>
+            <div class="form-group col-md-4">
+                <button type="button" class="btn btn-danger btn-block">Izlaz</button>
+            </div>
+        </div>
+
+
+    </div>
+
+    </form>
+</main>
+<script>
+    $('.datepicker').datepicker({
+    });
+
+    $("#rezervacija").validate();
+
+    jQuery.extend(jQuery.validator.messages, {
+        required: "Ovo polje je obavezno.",
+
+    });
+</script>
+
+
+</body>
+</html>
