@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hr" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Contact form">
@@ -23,6 +23,12 @@
     <!-- Additional Styles -->
     <link rel="stylesheet" href="css/styles.css">
 
+
+
+
+
+
+
 </head>
 <body>
 
@@ -41,10 +47,12 @@
             </div>
         </div>
 
+
+
         <div class="form-row">
             <div class="form-group col-md-6">
-                <label for="date">Datum</label>
-                <input type="text" class="form-control datepicker" name="date" id="date" aria-describedby="date" placeholder="Odaberite datum"  required>
+                <label for="datepicker">Datum</label>
+                <input type="text" class="form-control datepicker" name="date" id="datepicker" aria-describedby="date" placeholder="Odaberite datum"  required>
             </div>
             <div class="form-group col-md-6">
                 <label for="time">Vrijeme</label>
@@ -162,8 +170,21 @@
     </form>
 </main>
 <script>
-    $('.datepicker').datepicker({
+
+
+    $(function() {
+        $("#datepicker").datepicker({
+            dateFormat: 'dd/mm/yy',
+            changeMonth: true,
+            changeYear: true,
+            constrainInput: false
+        });
     });
+
+    $.fn.datepicker.defaults.format = 'dd/mm/yyyy';
+
+
+
 
     $("#rezervacija").validate();
 
